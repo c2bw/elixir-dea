@@ -79,6 +79,12 @@ A custom timeout can be set using `timeout`s when calling `DockerEngineAPI.Conne
 client = DockerEngineAPI.Connection.new(timeout: 50_000)
 ```
 
+Additional middleware can be set in the compile-time or runtime configuration:
+ ```elixir  
+config :tesla, DockerEngineAPI.Connection, adapter: Tesla.Adapter.Hackney
+```
+*NOTE: remember to add the adapter to your dependencies in mix.exs*
+
 [exdoc]: https://github.com/elixir-lang/ex_doc
 [hexdocs]: https://hexdocs.pm
 [available in hex]: https://hex.pm/docs/publish
