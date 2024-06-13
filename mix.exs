@@ -45,6 +45,7 @@ defmodule DockerEngineAPI.Mixfile do
   defp package do
     [
       name: "elixir_dea",
+      source_url: "https://github.com/c2bw/elixir-dea",
       files: ~w(.formatter.exs lib mix.exs README* LICENSE*),
       links: %{
         "GitHub" => "https://github.com/c2bw/elixir-dea"
