@@ -23,6 +23,12 @@ defmodule DockerEngineAPI.Connection do
                       "http://localhost/v1.45"
                     )
 
+  @default_timeout Application.compile_env(
+                     :elixir_dea,
+                     :timeout,
+                     20_000
+                   )
+
   @typedoc """
   The list of options that can be passed to new/1.
 
@@ -81,6 +87,13 @@ defmodule DockerEngineAPI.Connection do
         Application.get_env(:elixir_dea, :base_url, @default_base_url)
       )
 
+    timeout =
+      Keyword.get(
+        options,
+        :timeout,
+        Application.get_env(:elixir_dea, :timeout, @default_timeout)
+      )
+
     tesla_options = Application.get_env(:tesla, __MODULE__, [])
     middleware = Keyword.get(tesla_options, :middleware, [])
     json_engine = Keyword.get(tesla_options, :json, Jason)
@@ -98,6 +111,7 @@ defmodule DockerEngineAPI.Connection do
 
     [
       {Tesla.Middleware.BaseUrl, base_url},
+      {Tesla.Middleware.Timeout, [timeout: timeout]},
       {Tesla.Middleware.Headers, [{"user-agent", user_agent}]},
       {Tesla.Middleware.EncodeJson, engine: json_engine}
       | middleware

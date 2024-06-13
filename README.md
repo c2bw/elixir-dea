@@ -74,6 +74,11 @@ Multiple clients for the same API with different URLs can be created passing dif
 client = DockerEngineAPI.Connection.new(base_url: "http://localhost/v1.45")
 ```
 
+A custom timeout can be set using `timeout`s when calling `DockerEngineAPI.Connection.new/1`:
+```elixir
+client = DockerEngineAPI.Connection.new(timeout: 50_000)
+```
+
 [exdoc]: https://github.com/elixir-lang/ex_doc
 [hexdocs]: https://hexdocs.pm
 [available in hex]: https://hex.pm/docs/publish
