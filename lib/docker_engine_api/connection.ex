@@ -13,16 +13,15 @@ defmodule DockerEngineAPI.Connection do
 
   The default base URL can also be set as:
 
-      config :docker_engine_api,
+      config :elixir_dea,
         :base_url, "http://localhost/v1.45"
   """
 
   @default_base_url Application.compile_env(
-                      :docker_engine_api,
+                      :elixir_dea,
                       :base_url,
                       "http://localhost/v1.45"
                     )
-
 
   @typedoc """
   The list of options that can be passed to new/1.
@@ -32,7 +31,7 @@ defmodule DockerEngineAPI.Connection do
   """
   @type options :: [
           {:base_url, String.t()},
-          {:user_agent, String.t()},
+          {:user_agent, String.t()}
         ]
 
   @doc "Forward requests to Tesla."
@@ -70,9 +69,6 @@ defmodule DockerEngineAPI.Connection do
     |> Tesla.client(adapter())
   end
 
-
-
-
   @doc """
   Returns fully configured middleware for passing to Tesla.client/2.
   """
@@ -82,7 +78,7 @@ defmodule DockerEngineAPI.Connection do
       Keyword.get(
         options,
         :base_url,
-        Application.get_env(:docker_engine_api, :base_url, @default_base_url)
+        Application.get_env(:elixir_dea, :base_url, @default_base_url)
       )
 
     tesla_options = Application.get_env(:tesla, __MODULE__, [])
@@ -100,8 +96,6 @@ defmodule DockerEngineAPI.Connection do
         )
       )
 
-
-
     [
       {Tesla.Middleware.BaseUrl, base_url},
       {Tesla.Middleware.Headers, [{"user-agent", user_agent}]},
@@ -109,7 +103,6 @@ defmodule DockerEngineAPI.Connection do
       | middleware
     ]
   end
-
 
   @doc """
   Returns the default adapter for this API.

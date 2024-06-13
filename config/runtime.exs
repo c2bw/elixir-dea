@@ -8,5 +8,5 @@ import Config
 # The block below contains prod specific runtime configuration.
 
 if base_url = System.get_env("DOCKER_ENGINE_API_BASE_URI") do
-  config :docker_engine_api, base_url: base_url
+  config :elixir_dea, base_url: base_url
 end

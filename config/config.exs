@@ -7,7 +7,7 @@
 # General application configuration
 import Config
 
-config :docker_engine_api, base_url: "http://localhost/v1.45"
+config :elixir_dea, base_url: "http://localhost/v1.45"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
