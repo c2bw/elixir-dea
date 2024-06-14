@@ -17,17 +17,8 @@ defmodule DockerEngineAPI.Connection do
         :base_url, "http://localhost/v1.45"
   """
 
-  @default_base_url Application.compile_env(
-                      :elixir_dea,
-                      :base_url,
-                      "http://localhost/v1.45"
-                    )
-
-  @default_timeout Application.compile_env(
-                     :elixir_dea,
-                     :timeout,
-                     20_000
-                   )
+  @default_base_url "http://localhost/v1.45"
+  @default_timeout 20_000
 
   @typedoc """
   The list of options that can be passed to new/1.
