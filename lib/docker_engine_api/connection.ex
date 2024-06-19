@@ -28,7 +28,8 @@ defmodule DockerEngineAPI.Connection do
   """
   @type options :: [
           {:base_url, String.t()},
-          {:user_agent, String.t()}
+          {:user_agent, String.t()},
+          {:timeout, non_neg_integer()}
         ]
 
   @doc "Forward requests to Tesla."
