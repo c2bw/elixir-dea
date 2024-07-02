@@ -74,14 +74,17 @@ Multiple clients for the same API with different URLs can be created passing dif
 client = DockerEngineAPI.Connection.new(base_url: "http://localhost/v1.45")
 ```
 
-A custom timeout can be set using `timeout`s when calling `DockerEngineAPI.Connection.new/1`:
+A custom `timeout` can be set:
 ```elixir
+# when calling `DockerEngineAPI.Connection.new/1`
 client = DockerEngineAPI.Connection.new(timeout: 50_000)
+# in the configuration file (example: runtime.exs)
+config :elixir_dea, timeout: 50_000
 ```
 
 Additional middleware can be set in the compile-time or runtime configuration:
  ```elixir  
-config :tesla, DockerEngineAPI.Connection, adapter: Tesla.Adapter.Hackney
+config :tesla, DockerEngineAPI.Connection, adapter: {Tesla.Adapter.Hackney, recv_timeout: 50_000}
 ```
 *NOTE: remember to add the adapter to your dependencies in mix.exs*
 
