@@ -4,7 +4,7 @@ defmodule DockerEngineAPI.Mixfile do
   def project do
     [
       app: :elixir_dea,
-      version: "1.45.2",
+      version: "1.45.3",
       elixir: "~> 1.14",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
