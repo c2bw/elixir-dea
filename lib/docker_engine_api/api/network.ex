@@ -17,7 +17,7 @@ defmodule DockerEngineAPI.Api.Network do
 
   - `connection` (DockerEngineAPI.Connection): Connection to server
   - `id` (String.t): Network ID or name
-  - `container` (NetworkConnectRequest): 
+  - `container` (NetworkConnectRequest):
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -25,7 +25,7 @@ defmodule DockerEngineAPI.Api.Network do
   - `{:ok, nil}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec network_connect(Tesla.Env.client, String.t, DockerEngineAPI.Model.NetworkConnectRequest.t, keyword()) :: {:ok, nil} | {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec network_connect(Tesla.Env.client, String.t, DockerEngineAPI.Model.NetworkConnectRequest.t, keyword()) :: {:ok, Tesla.Env.t} | {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:error, Tesla.Env.t}
   def network_connect(connection, id, container, _opts \\ []) do
     request =
       %{}
@@ -90,10 +90,10 @@ defmodule DockerEngineAPI.Api.Network do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, Tesla.Env.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec network_delete(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec network_delete(Tesla.Env.client, String.t, keyword()) :: {:ok, Tesla.Env.t} | {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:error, Tesla.Env.t}
   def network_delete(connection, id, _opts \\ []) do
     request =
       %{}
@@ -118,15 +118,15 @@ defmodule DockerEngineAPI.Api.Network do
 
   - `connection` (DockerEngineAPI.Connection): Connection to server
   - `id` (String.t): Network ID or name
-  - `container` (NetworkDisconnectRequest): 
+  - `container` (NetworkDisconnectRequest):
   - `opts` (keyword): Optional parameters
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, Tesla.Env.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec network_disconnect(Tesla.Env.client, String.t, DockerEngineAPI.Model.NetworkDisconnectRequest.t, keyword()) :: {:ok, nil} | {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec network_disconnect(Tesla.Env.client, String.t, DockerEngineAPI.Model.NetworkDisconnectRequest.t, keyword()) :: {:ok, Tesla.Env.t} | {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:error, Tesla.Env.t}
   def network_disconnect(connection, id, container, _opts \\ []) do
     request =
       %{}
@@ -186,13 +186,13 @@ defmodule DockerEngineAPI.Api.Network do
 
   @doc """
   List networks
-  Returns a list of networks. For details on the format, see the [network inspect endpoint](#operation/NetworkInspect).  Note that it uses a different, smaller representation of a network than inspecting a single network. For example, the list of containers attached to the network is not propagated in API versions 1.28 and up. 
+  Returns a list of networks. For details on the format, see the [network inspect endpoint](#operation/NetworkInspect).  Note that it uses a different, smaller representation of a network than inspecting a single network. For example, the list of containers attached to the network is not propagated in API versions 1.28 and up.
 
   ### Parameters
 
   - `connection` (DockerEngineAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filters` (String.t): JSON encoded value of the filters (a `map[string][]string`) to process on the networks list.  Available filters:  - `dangling=<boolean>` When set to `true` (or `1`), returns all    networks that are not in use by a container. When set to `false`    (or `0`), only networks that are in use by one or more    containers are returned. - `driver=<driver-name>` Matches a network's driver. - `id=<network-id>` Matches all or part of a network ID. - `label=<key>` or `label=<key>=<value>` of a network label. - `name=<network-name>` Matches all or part of a network name. - `scope=[\"swarm\"|\"global\"|\"local\"]` Filters networks by scope (`swarm`, `global`, or `local`). - `type=[\"custom\"|\"builtin\"]` Filters networks by type. The `custom` keyword returns all user-defined networks. 
+    - `:filters` (String.t): JSON encoded value of the filters (a `map[string][]string`) to process on the networks list.  Available filters:  - `dangling=<boolean>` When set to `true` (or `1`), returns all    networks that are not in use by a container. When set to `false`    (or `0`), only networks that are in use by one or more    containers are returned. - `driver=<driver-name>` Matches a network's driver. - `id=<network-id>` Matches all or part of a network ID. - `label=<key>` or `label=<key>=<value>` of a network label. - `name=<network-name>` Matches all or part of a network name. - `scope=[\"swarm\"|\"global\"|\"local\"]` Filters networks by scope (`swarm`, `global`, or `local`). - `type=[\"custom\"|\"builtin\"]` Filters networks by type. The `custom` keyword returns all user-defined networks.
 
   ### Returns
 
@@ -227,7 +227,7 @@ defmodule DockerEngineAPI.Api.Network do
 
   - `connection` (DockerEngineAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filters` (String.t): Filters to process on the prune list, encoded as JSON (a `map[string][]string`).  Available filters: - `until=<timestamp>` Prune networks created before this timestamp. The `<timestamp>` can be Unix timestamps, date formatted timestamps, or Go duration strings (e.g. `10m`, `1h30m`) computed relative to the daemon machine’s time. - `label` (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) Prune networks with (or without, in case `label!=...` is used) the specified labels. 
+    - `:filters` (String.t): Filters to process on the prune list, encoded as JSON (a `map[string][]string`).  Available filters: - `until=<timestamp>` Prune networks created before this timestamp. The `<timestamp>` can be Unix timestamps, date formatted timestamps, or Go duration strings (e.g. `10m`, `1h30m`) computed relative to the daemon machine’s time. - `label` (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) Prune networks with (or without, in case `label!=...` is used) the specified labels.
 
   ### Returns
 
