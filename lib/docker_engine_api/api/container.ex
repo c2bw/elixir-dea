@@ -471,7 +471,7 @@ defmodule DockerEngineAPI.Api.Container do
   - `{:ok, String.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec container_logs(Tesla.Env.client, String.t, keyword()) :: {:ok, DockerEngineAPI.Model.ErrorResponse.t} | {:ok, String.t} | {:error, Tesla.Env.t}
+  @spec container_logs(Tesla.Env.client, String.t, keyword()) :: {:ok, Tesla.Env.t} | {:error, Tesla.Env.t | DockerEngineAPI.Model.ErrorResponse.t}
   def container_logs(connection, id, opts \\ []) do
     optional_params = %{
       :follow => :query,
