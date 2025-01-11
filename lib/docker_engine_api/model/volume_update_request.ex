@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.VolumeUpdateRequest do
   Volume configuration
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Spec
   ]
@@ -22,4 +22,3 @@ defmodule DockerEngineAPI.Model.VolumeUpdateRequest do
      |> Deserializer.deserialize(:Spec, :struct, DockerEngineAPI.Model.ClusterVolumeSpec)
   end
 end
-

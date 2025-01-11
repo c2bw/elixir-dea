@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.SwarmSpecRaft do
   Raft configuration.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :SnapshotInterval,
     :KeepOldSnapshots,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.SwarmSpecRaft do
     value
   end
 end
-

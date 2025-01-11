@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.SwarmSpecTaskDefaults do
   Defaults for creating tasks in this cluster.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :LogDriver
   ]
@@ -22,4 +22,3 @@ defmodule DockerEngineAPI.Model.SwarmSpecTaskDefaults do
      |> Deserializer.deserialize(:LogDriver, :struct, DockerEngineAPI.Model.SwarmSpecTaskDefaultsLogDriver)
   end
 end
-

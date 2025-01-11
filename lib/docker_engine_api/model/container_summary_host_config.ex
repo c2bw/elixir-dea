@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerSummaryHostConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NetworkMode
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.ContainerSummaryHostConfig do
     value
   end
 end
-

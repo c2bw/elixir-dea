@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerInspectResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Id,
     :Created,
@@ -75,4 +75,3 @@ defmodule DockerEngineAPI.Model.ContainerInspectResponse do
      |> Deserializer.deserialize(:NetworkSettings, :struct, DockerEngineAPI.Model.NetworkSettings)
   end
 end
-

@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.Resources do
   A container's resources (cgroups config, ulimits, etc)
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :CpuShares,
     :Memory,
@@ -89,4 +89,3 @@ defmodule DockerEngineAPI.Model.Resources do
      |> Deserializer.deserialize(:Ulimits, :list, DockerEngineAPI.Model.ResourcesUlimitsInner)
   end
 end
-

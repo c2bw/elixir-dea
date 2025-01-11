@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.HealthcheckResult do
   @moduledoc """
-  HealthcheckResult stores information about a single run of a healthcheck probe 
+  HealthcheckResult stores information about a single run of a healthcheck probe
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Start,
     :End,
@@ -28,4 +28,3 @@ defmodule DockerEngineAPI.Model.HealthcheckResult do
      |> Deserializer.deserialize(:Start, :datetime, nil)
   end
 end
-

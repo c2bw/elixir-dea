@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemVersionPlatform do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.SystemVersionPlatform do
     value
   end
 end
-

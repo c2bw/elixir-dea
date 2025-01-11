@@ -96,7 +96,7 @@ defmodule DockerEngineAPI.RequestBuilder do
       Tesla.Multipart.add_field(
         multipart,
         key,
-        Jason.encode!(value),
+        JSON.encode!(value),
         headers: [{:"Content-Type", "application/json"}]
       )
     end)
@@ -188,10 +188,10 @@ defmodule DockerEngineAPI.RequestBuilder do
   defp decode(%Tesla.Env{} = env, false), do: {:ok, env}
 
   defp decode(%Tesla.Env{body: body}, %{}) do
-    DockerEngineAPI.Deserializer.jason_decode(body)
+    DockerEngineAPI.Deserializer.json_decode(body)
   end
 
   defp decode(%Tesla.Env{body: body}, module) do
-    DockerEngineAPI.Deserializer.jason_decode(body, module)
+    DockerEngineAPI.Deserializer.json_decode(body, module)
   end
 end

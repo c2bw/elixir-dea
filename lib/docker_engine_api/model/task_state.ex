@@ -3,20 +3,19 @@
 
 defmodule DockerEngineAPI.Model.TaskState do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
-    
+
   ]
 
   @type t :: %__MODULE__{
-    
+
   }
 
   def decode(value) do
     value
   end
 end
-

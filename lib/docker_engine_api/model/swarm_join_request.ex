@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SwarmJoinRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ListenAddr,
     :AdvertiseAddr,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.SwarmJoinRequest do
     value
   end
 end
-

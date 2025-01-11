@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.MountVolumeOptions do
   Optional configuration for the `volume` type.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NoCopy,
     :Labels,
@@ -28,4 +28,3 @@ defmodule DockerEngineAPI.Model.MountVolumeOptions do
      |> Deserializer.deserialize(:DriverConfig, :struct, DockerEngineAPI.Model.MountVolumeOptionsDriverConfig)
   end
 end
-

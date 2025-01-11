@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ImageSearchResponseItem do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :description,
     :is_official,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.ImageSearchResponseItem do
     value
   end
 end
-

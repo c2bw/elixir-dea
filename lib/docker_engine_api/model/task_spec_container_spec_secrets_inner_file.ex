@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecContainerSpecSecretsInnerFile do
   @moduledoc """
-  File represents a specific target that is backed by a file. 
+  File represents a specific target that is backed by a file.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :UID,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecSecretsInnerFile do
     value
   end
 end
-

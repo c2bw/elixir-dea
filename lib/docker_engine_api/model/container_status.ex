@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ContainerStatus do
   represents the status of a container.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ContainerID,
     :PID,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.ContainerStatus do
     value
   end
 end
-

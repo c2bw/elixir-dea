@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecPlacementPreferencesInnerSpread do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :SpreadDescriptor
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.TaskSpecPlacementPreferencesInnerSpread do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ResourcesUlimitsInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Soft,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.ResourcesUlimitsInner do
     value
   end
 end
-

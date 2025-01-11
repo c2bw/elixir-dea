@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.TaskSpec do
   User modifiable task configuration.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :PluginSpec,
     :ContainerSpec,
@@ -47,4 +47,3 @@ defmodule DockerEngineAPI.Model.TaskSpec do
      |> Deserializer.deserialize(:LogDriver, :struct, DockerEngineAPI.Model.TaskSpecLogDriver)
   end
 end
-

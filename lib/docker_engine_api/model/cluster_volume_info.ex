@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolumeInfo do
   @moduledoc """
-  Information about the global status of the volume. 
+  Information about the global status of the volume.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :CapacityBytes,
     :VolumeContext,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.ClusterVolumeInfo do
     value
   end
 end
-

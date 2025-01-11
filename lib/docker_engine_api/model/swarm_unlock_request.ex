@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SwarmUnlockRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :UnlockKey
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.SwarmUnlockRequest do
     value
   end
 end
-

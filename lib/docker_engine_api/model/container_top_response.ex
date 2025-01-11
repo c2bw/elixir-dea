@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ContainerTopResponse do
   OK response to ContainerTop operation
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Titles,
     :Processes
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ContainerTopResponse do
     value
   end
 end
-

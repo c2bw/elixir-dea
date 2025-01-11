@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ExecConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :AttachStdin,
     :AttachStdout,
@@ -39,4 +39,3 @@ defmodule DockerEngineAPI.Model.ExecConfig do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolumeSpecAccessModeCapacityRange do
   @moduledoc """
-  The desired capacity that the volume should be created with. If empty, the plugin will decide the capacity. 
+  The desired capacity that the volume should be created with. If empty, the plugin will decide the capacity.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :RequiredBytes,
     :LimitBytes
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ClusterVolumeSpecAccessModeCapacityRange do
     value
   end
 end
-

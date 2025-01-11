@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.RegistryServiceConfig do
   @moduledoc """
-  RegistryServiceConfig stores daemon registry services configuration. 
+  RegistryServiceConfig stores daemon registry services configuration.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :AllowNondistributableArtifactsCIDRs,
     :AllowNondistributableArtifactsHostnames,
@@ -30,4 +30,3 @@ defmodule DockerEngineAPI.Model.RegistryServiceConfig do
      |> Deserializer.deserialize(:IndexConfigs, :map, DockerEngineAPI.Model.IndexInfo)
   end
 end
-

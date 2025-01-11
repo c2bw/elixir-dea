@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.BuildCache do
   @moduledoc """
-  BuildCache contains information about a build cache record. 
+  BuildCache contains information about a build cache record.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Parent,
@@ -39,4 +39,3 @@ defmodule DockerEngineAPI.Model.BuildCache do
     value
   end
 end
-

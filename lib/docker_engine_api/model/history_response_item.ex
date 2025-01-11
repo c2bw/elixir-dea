@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.HistoryResponseItem do
   individual image layer information in response to ImageHistory operation
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Id,
     :Created,
@@ -29,4 +29,3 @@ defmodule DockerEngineAPI.Model.HistoryResponseItem do
     value
   end
 end
-

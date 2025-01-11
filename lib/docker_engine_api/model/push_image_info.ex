@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PushImageInfo do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :error,
     :status,
@@ -28,4 +28,3 @@ defmodule DockerEngineAPI.Model.PushImageInfo do
      |> Deserializer.deserialize(:progressDetail, :struct, DockerEngineAPI.Model.ProgressDetail)
   end
 end
-

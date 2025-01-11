@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemInfo do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Containers,
@@ -150,4 +150,3 @@ defmodule DockerEngineAPI.Model.SystemInfo do
      |> Deserializer.deserialize(:DefaultAddressPools, :list, DockerEngineAPI.Model.SystemInfoDefaultAddressPoolsInner)
   end
 end
-

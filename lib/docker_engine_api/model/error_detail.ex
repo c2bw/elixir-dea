@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ErrorDetail do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :code,
     :message
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ErrorDetail do
     value
   end
 end
-

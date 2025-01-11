@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.EndpointSpec do
   Properties that can be configured to access and load balance a service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Mode,
     :Ports
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.EndpointSpec do
      |> Deserializer.deserialize(:Ports, :list, DockerEngineAPI.Model.EndpointPortConfig)
   end
 end
-

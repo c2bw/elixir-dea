@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.VolumeCreateOptions do
   Volume configuration
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Driver,
@@ -30,4 +30,3 @@ defmodule DockerEngineAPI.Model.VolumeCreateOptions do
      |> Deserializer.deserialize(:ClusterVolumeSpec, :struct, DockerEngineAPI.Model.ClusterVolumeSpec)
   end
 end
-

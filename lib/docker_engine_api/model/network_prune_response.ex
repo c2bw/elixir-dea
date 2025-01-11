@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkPruneResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NetworksDeleted
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.NetworkPruneResponse do
     value
   end
 end
-

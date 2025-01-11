@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SwarmInfo do
   @moduledoc """
-  Represents generic information about swarm. 
+  Represents generic information about swarm.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NodeID,
     :NodeAddr,
@@ -40,4 +40,3 @@ defmodule DockerEngineAPI.Model.SwarmInfo do
      |> Deserializer.deserialize(:Cluster, :struct, DockerEngineAPI.Model.ClusterInfo)
   end
 end
-

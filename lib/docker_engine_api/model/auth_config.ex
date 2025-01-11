@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.AuthConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :username,
     :password,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.AuthConfig do
     value
   end
 end
-

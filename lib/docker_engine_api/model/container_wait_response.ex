@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ContainerWaitResponse do
   OK response to ContainerWait operation
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :StatusCode,
     :Error
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.ContainerWaitResponse do
      |> Deserializer.deserialize(:Error, :struct, DockerEngineAPI.Model.ContainerWaitExitError)
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkConnectRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Container,
     :EndpointConfig
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.NetworkConnectRequest do
      |> Deserializer.deserialize(:EndpointConfig, :struct, DockerEngineAPI.Model.EndpointSettings)
   end
 end
-

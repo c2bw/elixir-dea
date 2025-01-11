@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Volume do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Driver,
@@ -41,4 +41,3 @@ defmodule DockerEngineAPI.Model.Volume do
      |> Deserializer.deserialize(:UsageData, :struct, DockerEngineAPI.Model.VolumeUsageData)
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ImagePruneResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ImagesDeleted,
     :SpaceReclaimed
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.ImagePruneResponse do
      |> Deserializer.deserialize(:ImagesDeleted, :list, DockerEngineAPI.Model.ImageDeleteResponseItem)
   end
 end
-

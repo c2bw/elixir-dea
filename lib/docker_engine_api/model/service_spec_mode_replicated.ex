@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceSpecModeReplicated do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Replicas
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.ServiceSpecModeReplicated do
     value
   end
 end
-

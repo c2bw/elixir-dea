@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolumeSpecAccessModeSecretsInner do
   @moduledoc """
-  One cluster volume secret entry. Defines a key-value pair that is passed to the plugin. 
+  One cluster volume secret entry. Defines a key-value pair that is passed to the plugin.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Key,
     :Secret
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ClusterVolumeSpecAccessModeSecretsInner do
     value
   end
 end
-

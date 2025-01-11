@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.EngineDescription do
   EngineDescription provides information about an engine.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :EngineVersion,
     :Labels,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.EngineDescription do
      |> Deserializer.deserialize(:Plugins, :list, DockerEngineAPI.Model.EngineDescriptionPluginsInner)
   end
 end
-

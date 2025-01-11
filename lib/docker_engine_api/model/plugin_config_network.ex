@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PluginConfigNetwork do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Type
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.PluginConfigNetwork do
     value
   end
 end
-

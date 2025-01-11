@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ThrottleDevice do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Path,
     :Rate
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ThrottleDevice do
     value
   end
 end
-

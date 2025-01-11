@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ContainerSummaryNetworkSettings do
   A summary of the container's network settings
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Networks
   ]
@@ -22,4 +22,3 @@ defmodule DockerEngineAPI.Model.ContainerSummaryNetworkSettings do
      |> Deserializer.deserialize(:Networks, :map, DockerEngineAPI.Model.EndpointSettings)
   end
 end
-

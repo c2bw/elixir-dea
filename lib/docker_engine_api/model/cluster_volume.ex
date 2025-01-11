@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolume do
   @moduledoc """
-  Options and information specific to, and only present on, Swarm CSI cluster volumes. 
+  Options and information specific to, and only present on, Swarm CSI cluster volumes.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Version,
@@ -37,4 +37,3 @@ defmodule DockerEngineAPI.Model.ClusterVolume do
      |> Deserializer.deserialize(:PublishStatus, :list, DockerEngineAPI.Model.ClusterVolumePublishStatusInner)
   end
 end
-

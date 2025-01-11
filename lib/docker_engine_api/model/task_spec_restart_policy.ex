@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecRestartPolicy do
   @moduledoc """
-  Specification for the restart policy which applies to containers created as part of this service. 
+  Specification for the restart policy which applies to containers created as part of this service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Condition,
     :Delay,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.TaskSpecRestartPolicy do
     value
   end
 end
-

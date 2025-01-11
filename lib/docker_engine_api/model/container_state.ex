@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerState do
   @moduledoc """
-  ContainerState stores container's running state. It's part of ContainerJSONBase and will be returned by the \"inspect\" command. 
+  ContainerState stores container's running state. It's part of ContainerJSONBase and will be returned by the \"inspect\" command.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Status,
     :Running,
@@ -44,4 +44,3 @@ defmodule DockerEngineAPI.Model.ContainerState do
      |> Deserializer.deserialize(:Health, :struct, DockerEngineAPI.Model.Health)
   end
 end
-

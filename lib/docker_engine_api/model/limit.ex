@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Limit do
   @moduledoc """
-  An object describing a limit on resources which can be requested by a task. 
+  An object describing a limit on resources which can be requested by a task.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NanoCPUs,
     :MemoryBytes,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.Limit do
     value
   end
 end
-

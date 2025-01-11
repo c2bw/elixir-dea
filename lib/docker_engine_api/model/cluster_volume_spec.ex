@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolumeSpec do
   @moduledoc """
-  Cluster-specific options used to create the volume. 
+  Cluster-specific options used to create the volume.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Group,
     :AccessMode
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.ClusterVolumeSpec do
      |> Deserializer.deserialize(:AccessMode, :struct, DockerEngineAPI.Model.ClusterVolumeSpecAccessMode)
   end
 end
-

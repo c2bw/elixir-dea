@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NodeSpec do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Labels,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.NodeSpec do
     value
   end
 end
-

@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ServiceSpecUpdateConfig do
   Specification for the update strategy of the service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Parallelism,
     :Delay,
@@ -29,4 +29,3 @@ defmodule DockerEngineAPI.Model.ServiceSpecUpdateConfig do
     value
   end
 end
-

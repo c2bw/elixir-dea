@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerUpdateRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :CpuShares,
     :Memory,
@@ -92,4 +92,3 @@ defmodule DockerEngineAPI.Model.ContainerUpdateRequest do
      |> Deserializer.deserialize(:RestartPolicy, :struct, DockerEngineAPI.Model.RestartPolicy)
   end
 end
-

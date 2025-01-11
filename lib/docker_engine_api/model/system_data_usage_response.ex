@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemDataUsageResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :LayersSize,
     :Images,
@@ -33,4 +33,3 @@ defmodule DockerEngineAPI.Model.SystemDataUsageResponse do
      |> Deserializer.deserialize(:BuildCache, :list, DockerEngineAPI.Model.BuildCache)
   end
 end
-

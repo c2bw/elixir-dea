@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.EventActor do
   @moduledoc """
-  Actor describes something that generates events, like a container, network, or a volume. 
+  Actor describes something that generates events, like a container, network, or a volume.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Attributes
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.EventActor do
     value
   end
 end
-

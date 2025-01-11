@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.JoinTokens do
   @moduledoc """
-  JoinTokens contains the tokens workers and managers need to join the swarm. 
+  JoinTokens contains the tokens workers and managers need to join the swarm.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Worker,
     :Manager
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.JoinTokens do
     value
   end
 end
-

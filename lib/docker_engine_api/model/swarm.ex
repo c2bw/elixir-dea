@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Swarm do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Version,
@@ -45,4 +45,3 @@ defmodule DockerEngineAPI.Model.Swarm do
      |> Deserializer.deserialize(:JoinTokens, :struct, DockerEngineAPI.Model.JoinTokens)
   end
 end
-

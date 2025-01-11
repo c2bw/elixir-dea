@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesSeccomp do
   Options for configuring seccomp on the container
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Mode,
     :Profile
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesSeccomp do
     value
   end
 end
-

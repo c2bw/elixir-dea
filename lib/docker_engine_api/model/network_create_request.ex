@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkCreateRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :CheckDuplicate,
@@ -40,4 +40,3 @@ defmodule DockerEngineAPI.Model.NetworkCreateRequest do
      |> Deserializer.deserialize(:IPAM, :struct, DockerEngineAPI.Model.Ipam)
   end
 end
-

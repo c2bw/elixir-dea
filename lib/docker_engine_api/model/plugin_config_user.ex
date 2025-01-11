@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PluginConfigUser do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :UID,
     :GID
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.PluginConfigUser do
     value
   end
 end
-

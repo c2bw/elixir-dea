@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SwarmInitRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ListenAddr,
     :AdvertiseAddr,
@@ -36,4 +36,3 @@ defmodule DockerEngineAPI.Model.SwarmInitRequest do
      |> Deserializer.deserialize(:Spec, :struct, DockerEngineAPI.Model.SwarmSpec)
   end
 end
-

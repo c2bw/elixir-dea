@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.SwarmSpecCaConfig do
   CA configuration.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NodeCertExpiry,
     :ExternalCAs,
@@ -30,4 +30,3 @@ defmodule DockerEngineAPI.Model.SwarmSpecCaConfig do
      |> Deserializer.deserialize(:ExternalCAs, :list, DockerEngineAPI.Model.SwarmSpecCaConfigExternalCasInner)
   end
 end
-

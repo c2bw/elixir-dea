@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecPlacement do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Constraints,
     :Preferences,
@@ -29,4 +29,3 @@ defmodule DockerEngineAPI.Model.TaskSpecPlacement do
      |> Deserializer.deserialize(:Platforms, :list, DockerEngineAPI.Model.Platform)
   end
 end
-

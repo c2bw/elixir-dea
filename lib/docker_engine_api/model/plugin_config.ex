@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.PluginConfig do
   The config of a plugin.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :DockerVersion,
     :Description,
@@ -59,4 +59,3 @@ defmodule DockerEngineAPI.Model.PluginConfig do
      |> Deserializer.deserialize(:rootfs, :struct, DockerEngineAPI.Model.PluginConfigRootfs)
   end
 end
-

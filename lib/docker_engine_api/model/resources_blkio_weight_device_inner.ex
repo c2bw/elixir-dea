@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ResourcesBlkioWeightDeviceInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Path,
     :Weight
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ResourcesBlkioWeightDeviceInner do
     value
   end
 end
-

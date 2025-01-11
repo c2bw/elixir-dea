@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Mount do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Target,
     :Source,
@@ -38,4 +38,3 @@ defmodule DockerEngineAPI.Model.Mount do
      |> Deserializer.deserialize(:TmpfsOptions, :struct, DockerEngineAPI.Model.MountTmpfsOptions)
   end
 end
-

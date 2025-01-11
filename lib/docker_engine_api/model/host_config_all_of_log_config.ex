@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.HostConfigAllOfLogConfig do
   The logging configuration for this container
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Type,
     :Config
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.HostConfigAllOfLogConfig do
     value
   end
 end
-

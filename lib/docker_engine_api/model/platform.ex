@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Platform do
   @moduledoc """
-  Platform represents the platform (Arch/OS). 
+  Platform represents the platform (Arch/OS).
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Architecture,
     :OS
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.Platform do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemVersion do
   @moduledoc """
-  Response of Engine API: GET \"/version\" 
+  Response of Engine API: GET \"/version\"
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Platform,
     :Components,
@@ -45,4 +45,3 @@ defmodule DockerEngineAPI.Model.SystemVersion do
      |> Deserializer.deserialize(:Components, :list, DockerEngineAPI.Model.SystemVersionComponentsInner)
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemVersionComponentsInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Version,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.SystemVersionComponentsInner do
     value
   end
 end
-

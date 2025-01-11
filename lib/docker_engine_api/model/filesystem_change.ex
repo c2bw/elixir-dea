@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.FilesystemChange do
   @moduledoc """
-  Change in the container's filesystem. 
+  Change in the container's filesystem.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Path,
     :Kind
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.FilesystemChange do
      |> Deserializer.deserialize(:Kind, :struct, DockerEngineAPI.Model.ChangeType)
   end
 end
-

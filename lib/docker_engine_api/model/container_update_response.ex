@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ContainerUpdateResponse do
   OK response to ContainerUpdate operation
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Warnings
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.ContainerUpdateResponse do
     value
   end
 end
-

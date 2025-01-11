@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.UnlockKeyResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :UnlockKey
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.UnlockKeyResponse do
     value
   end
 end
-

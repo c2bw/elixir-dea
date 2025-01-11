@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ServiceSpec do
   User modifiable configuration for a service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Labels,
@@ -41,4 +41,3 @@ defmodule DockerEngineAPI.Model.ServiceSpec do
      |> Deserializer.deserialize(:EndpointSpec, :struct, DockerEngineAPI.Model.EndpointSpec)
   end
 end
-
