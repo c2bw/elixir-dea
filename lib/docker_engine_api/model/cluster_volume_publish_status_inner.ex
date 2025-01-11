@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolumePublishStatusInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NodeID,
     :State,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.ClusterVolumePublishStatusInner do
     value
   end
 end
-

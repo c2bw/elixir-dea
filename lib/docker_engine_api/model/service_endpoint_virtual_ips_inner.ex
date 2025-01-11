@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceEndpointVirtualIpsInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NetworkID,
     :Addr
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ServiceEndpointVirtualIpsInner do
     value
   end
 end
-

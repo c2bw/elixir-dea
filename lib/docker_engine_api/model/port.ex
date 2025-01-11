@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.Port do
   An open port on a container
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :IP,
     :PrivatePort,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.Port do
     value
   end
 end
-

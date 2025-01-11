@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemInfoDefaultAddressPoolsInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Base,
     :Size
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.SystemInfoDefaultAddressPoolsInner do
     value
   end
 end
-

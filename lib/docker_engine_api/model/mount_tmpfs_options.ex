@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.MountTmpfsOptions do
   Optional configuration for the `tmpfs` type.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :SizeBytes,
     :Mode
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.MountTmpfsOptions do
     value
   end
 end
-

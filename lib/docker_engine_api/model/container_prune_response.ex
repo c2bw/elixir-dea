@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerPruneResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ContainersDeleted,
     :SpaceReclaimed
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ContainerPruneResponse do
     value
   end
 end
-

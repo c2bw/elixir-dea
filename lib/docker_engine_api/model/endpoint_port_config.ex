@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.EndpointPortConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Protocol,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.EndpointPortConfig do
     value
   end
 end
-

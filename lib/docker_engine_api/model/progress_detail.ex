@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ProgressDetail do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :current,
     :total
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ProgressDetail do
     value
   end
 end
-

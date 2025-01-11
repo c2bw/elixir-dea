@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Task do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Version,
@@ -53,4 +53,3 @@ defmodule DockerEngineAPI.Model.Task do
      |> Deserializer.deserialize(:JobIteration, :struct, DockerEngineAPI.Model.ObjectVersion)
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Network do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Id,
@@ -47,4 +47,3 @@ defmodule DockerEngineAPI.Model.Network do
      |> Deserializer.deserialize(:Containers, :map, DockerEngineAPI.Model.NetworkContainer)
   end
 end
-

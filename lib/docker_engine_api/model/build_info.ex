@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.BuildInfo do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :id,
     :stream,
@@ -38,4 +38,3 @@ defmodule DockerEngineAPI.Model.BuildInfo do
      |> Deserializer.deserialize(:aux, :struct, DockerEngineAPI.Model.ImageId)
   end
 end
-

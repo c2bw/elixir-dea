@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.TaskStatus do
   represents the status of a task.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Timestamp,
     :State,
@@ -34,4 +34,3 @@ defmodule DockerEngineAPI.Model.TaskStatus do
      |> Deserializer.deserialize(:PortStatus, :struct, DockerEngineAPI.Model.PortStatus)
   end
 end
-

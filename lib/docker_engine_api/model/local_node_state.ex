@@ -6,17 +6,16 @@ defmodule DockerEngineAPI.Model.LocalNodeState do
   Current local status of this node.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
-    
+
   ]
 
   @type t :: %__MODULE__{
-    
+
   }
 
   def decode(value) do
     value
   end
 end
-

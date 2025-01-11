@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Node do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Version,
@@ -40,4 +40,3 @@ defmodule DockerEngineAPI.Model.Node do
      |> Deserializer.deserialize(:ManagerStatus, :struct, DockerEngineAPI.Model.ManagerStatus)
   end
 end
-

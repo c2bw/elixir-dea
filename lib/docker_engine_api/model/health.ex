@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Health do
   @moduledoc """
-  Health stores information about the container's healthcheck results. 
+  Health stores information about the container's healthcheck results.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Status,
     :FailingStreak,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.Health do
      |> Deserializer.deserialize(:Log, :list, DockerEngineAPI.Model.HealthcheckResult)
   end
 end
-

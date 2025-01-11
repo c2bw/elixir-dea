@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceUpdateRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Labels,
@@ -41,4 +41,3 @@ defmodule DockerEngineAPI.Model.ServiceUpdateRequest do
      |> Deserializer.deserialize(:EndpointSpec, :struct, DockerEngineAPI.Model.EndpointSpec)
   end
 end
-

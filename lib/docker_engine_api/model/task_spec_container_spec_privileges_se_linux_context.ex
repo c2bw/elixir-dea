@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesSeLinuxContext do
   SELinux labels of the container
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Disable,
     :User,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesSeLinuxContext do
     value
   end
 end
-

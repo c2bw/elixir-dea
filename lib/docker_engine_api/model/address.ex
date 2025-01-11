@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.Address do
   Address represents an IPv4 or IPv6 IP address.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Addr,
     :PrefixLen
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.Address do
     value
   end
 end
-

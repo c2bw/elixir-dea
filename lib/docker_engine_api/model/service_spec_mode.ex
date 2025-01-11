@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ServiceSpecMode do
   Scheduling mode for the service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Replicated,
     :Global,
@@ -29,4 +29,3 @@ defmodule DockerEngineAPI.Model.ServiceSpecMode do
      |> Deserializer.deserialize(:ReplicatedJob, :struct, DockerEngineAPI.Model.ServiceSpecModeReplicatedJob)
   end
 end
-

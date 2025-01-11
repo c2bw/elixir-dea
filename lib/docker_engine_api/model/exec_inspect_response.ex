@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ExecInspectResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :CanRemove,
     :DetachKeys,
@@ -42,4 +42,3 @@ defmodule DockerEngineAPI.Model.ExecInspectResponse do
      |> Deserializer.deserialize(:ProcessConfig, :struct, DockerEngineAPI.Model.ProcessConfig)
   end
 end
-

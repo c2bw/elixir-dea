@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.ServiceUpdateStatus do
   The status of a service update.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :State,
     :StartedAt,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.ServiceUpdateStatus do
     value
   end
 end
-

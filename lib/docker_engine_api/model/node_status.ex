@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NodeStatus do
   @moduledoc """
-  NodeStatus represents the status of a node.  It provides the current status of the node, as seen by the manager. 
+  NodeStatus represents the status of a node.  It provides the current status of the node, as seen by the manager.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :State,
     :Message,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.NodeStatus do
      |> Deserializer.deserialize(:State, :struct, DockerEngineAPI.Model.NodeState)
   end
 end
-

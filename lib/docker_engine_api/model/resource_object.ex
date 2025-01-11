@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ResourceObject do
   @moduledoc """
-  An object describing the resources which can be advertised by a node and requested by a task. 
+  An object describing the resources which can be advertised by a node and requested by a task.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NanoCPUs,
     :MemoryBytes,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.ResourceObject do
      |> Deserializer.deserialize(:GenericResources, :list, DockerEngineAPI.Model.GenericResourcesInner)
   end
 end
-

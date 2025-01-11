@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerCreateRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Hostname,
     :Domainname,
@@ -76,4 +76,3 @@ defmodule DockerEngineAPI.Model.ContainerCreateRequest do
      |> Deserializer.deserialize(:NetworkingConfig, :struct, DockerEngineAPI.Model.NetworkingConfig)
   end
 end
-

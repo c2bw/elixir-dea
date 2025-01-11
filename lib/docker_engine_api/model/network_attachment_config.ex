@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkAttachmentConfig do
   @moduledoc """
-  Specifies how a service should be attached to a particular network. 
+  Specifies how a service should be attached to a particular network.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Target,
     :Aliases,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.NetworkAttachmentConfig do
     value
   end
 end
-

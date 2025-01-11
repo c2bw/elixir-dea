@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PluginConfigRootfs do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :type,
     :diff_ids
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.PluginConfigRootfs do
     value
   end
 end
-

@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesAppArmor do
   Options for configuring AppArmor on the container
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Mode
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesAppArmor do
     value
   end
 end
-

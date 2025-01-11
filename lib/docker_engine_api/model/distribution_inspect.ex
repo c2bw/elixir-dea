@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.DistributionInspect do
   @moduledoc """
-  Describes the result obtained from contacting the registry to retrieve image metadata. 
+  Describes the result obtained from contacting the registry to retrieve image metadata.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Descriptor,
     :Platforms
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.DistributionInspect do
      |> Deserializer.deserialize(:Platforms, :list, DockerEngineAPI.Model.OciPlatform)
   end
 end
-

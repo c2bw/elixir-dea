@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Secret do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Version,
@@ -31,4 +31,3 @@ defmodule DockerEngineAPI.Model.Secret do
      |> Deserializer.deserialize(:Spec, :struct, DockerEngineAPI.Model.SecretSpec)
   end
 end
-

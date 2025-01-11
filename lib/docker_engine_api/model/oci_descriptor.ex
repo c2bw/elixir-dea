@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.OciDescriptor do
   @moduledoc """
-  A descriptor struct containing digest, media type, and size, as defined in the [OCI Content Descriptors Specification](https://github.com/opencontainers/image-spec/blob/v1.0.1/descriptor.md). 
+  A descriptor struct containing digest, media type, and size, as defined in the [OCI Content Descriptors Specification](https://github.com/opencontainers/image-spec/blob/v1.0.1/descriptor.md).
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :mediaType,
     :digest,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.OciDescriptor do
     value
   end
 end
-

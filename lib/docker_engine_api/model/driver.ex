@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.Driver do
   Driver represents a driver (network, logging, secrets).
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :Options
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.Driver do
     value
   end
 end
-

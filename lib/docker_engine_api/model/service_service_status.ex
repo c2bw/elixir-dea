@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceServiceStatus do
   @moduledoc """
-  The status of the service's tasks. Provided only when requested as part of a ServiceList operation. 
+  The status of the service's tasks. Provided only when requested as part of a ServiceList operation.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :RunningTasks,
     :DesiredTasks,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.ServiceServiceStatus do
     value
   end
 end
-

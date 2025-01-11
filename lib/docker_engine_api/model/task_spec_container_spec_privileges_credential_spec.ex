@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesCredentialSpec do
   CredentialSpec for managed service account (Windows only)
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Config,
     :File,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecPrivilegesCredentialSpec do
     value
   end
 end
-

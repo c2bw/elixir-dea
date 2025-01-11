@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterVolumeSpecAccessMode do
   @moduledoc """
-  Defines how the volume is used by tasks. 
+  Defines how the volume is used by tasks.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Scope,
     :Sharing,
@@ -36,4 +36,3 @@ defmodule DockerEngineAPI.Model.ClusterVolumeSpecAccessMode do
      |> Deserializer.deserialize(:CapacityRange, :struct, DockerEngineAPI.Model.ClusterVolumeSpecAccessModeCapacityRange)
   end
 end
-

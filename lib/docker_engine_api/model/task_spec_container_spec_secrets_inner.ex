@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecContainerSpecSecretsInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :File,
     :SecretID,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.TaskSpecContainerSpecSecretsInner do
      |> Deserializer.deserialize(:File, :struct, DockerEngineAPI.Model.TaskSpecContainerSpecSecretsInnerFile)
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkDisconnectRequest do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Container,
     :Force
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.NetworkDisconnectRequest do
     value
   end
 end
-

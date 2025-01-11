@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.VolumeListResponse do
   Volume list response
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Volumes,
     :Warnings
@@ -24,4 +24,3 @@ defmodule DockerEngineAPI.Model.VolumeListResponse do
      |> Deserializer.deserialize(:Volumes, :list, DockerEngineAPI.Model.Volume)
   end
 end
-

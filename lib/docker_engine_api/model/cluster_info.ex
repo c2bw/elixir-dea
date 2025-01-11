@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ClusterInfo do
   @moduledoc """
-  ClusterInfo represents information about the swarm as is returned by the \"/info\" endpoint. Join-tokens are not included. 
+  ClusterInfo represents information about the swarm as is returned by the \"/info\" endpoint. Join-tokens are not included.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Version,
@@ -42,4 +42,3 @@ defmodule DockerEngineAPI.Model.ClusterInfo do
      |> Deserializer.deserialize(:TLSInfo, :struct, DockerEngineAPI.Model.TlsInfo)
   end
 end
-

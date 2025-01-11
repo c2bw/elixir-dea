@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PluginInterfaceType do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Prefix,
     :Capability,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.PluginInterfaceType do
     value
   end
 end
-

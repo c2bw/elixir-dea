@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ContainerSummary do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Id,
     :Names,
@@ -53,4 +53,3 @@ defmodule DockerEngineAPI.Model.ContainerSummary do
      |> Deserializer.deserialize(:Mounts, :list, DockerEngineAPI.Model.MountPoint)
   end
 end
-

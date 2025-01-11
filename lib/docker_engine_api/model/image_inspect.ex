@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ImageInspect do
   @moduledoc """
-  Information about an image in the local image cache. 
+  Information about an image in the local image cache.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Id,
     :RepoTags,
@@ -64,4 +64,3 @@ defmodule DockerEngineAPI.Model.ImageInspect do
      |> Deserializer.deserialize(:Metadata, :struct, DockerEngineAPI.Model.ImageInspectMetadata)
   end
 end
-

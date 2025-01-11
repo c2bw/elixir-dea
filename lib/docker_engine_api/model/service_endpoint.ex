@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceEndpoint do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Spec,
     :Ports,
@@ -28,4 +28,3 @@ defmodule DockerEngineAPI.Model.ServiceEndpoint do
      |> Deserializer.deserialize(:VirtualIPs, :list, DockerEngineAPI.Model.ServiceEndpointVirtualIpsInner)
   end
 end
-

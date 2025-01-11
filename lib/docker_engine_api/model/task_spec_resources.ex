@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecResources do
   @moduledoc """
-  Resource requirements which apply to each individual container created as part of the service. 
+  Resource requirements which apply to each individual container created as part of the service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Limits,
     :Reservations
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.TaskSpecResources do
      |> Deserializer.deserialize(:Reservations, :struct, DockerEngineAPI.Model.ResourceObject)
   end
 end
-

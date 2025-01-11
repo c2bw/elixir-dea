@@ -6,17 +6,16 @@ defmodule DockerEngineAPI.Model.Reachability do
   Reachability represents the reachability of a node.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
-    
+
   ]
 
   @type t :: %__MODULE__{
-    
+
   }
 
   def decode(value) do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SystemAuthResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Status,
     :IdentityToken
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.SystemAuthResponse do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ImageSummary do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Id,
     :ParentId,
@@ -37,4 +37,3 @@ defmodule DockerEngineAPI.Model.ImageSummary do
     value
   end
 end
-

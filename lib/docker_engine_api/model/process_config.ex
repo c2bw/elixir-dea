@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ProcessConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :privileged,
     :user,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.ProcessConfig do
     value
   end
 end
-

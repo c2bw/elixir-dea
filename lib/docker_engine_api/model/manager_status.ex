@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ManagerStatus do
   @moduledoc """
-  ManagerStatus represents the status of a manager.  It provides the current status of a node's manager component, if the node is a manager. 
+  ManagerStatus represents the status of a manager.  It provides the current status of a node's manager component, if the node is a manager.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Leader,
     :Reachability,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.ManagerStatus do
      |> Deserializer.deserialize(:Reachability, :struct, DockerEngineAPI.Model.Reachability)
   end
 end
-

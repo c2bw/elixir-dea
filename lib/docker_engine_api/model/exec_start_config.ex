@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ExecStartConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Detach,
     :Tty,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.ExecStartConfig do
     value
   end
 end
-

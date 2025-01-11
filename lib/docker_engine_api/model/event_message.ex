@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.EventMessage do
   @moduledoc """
-  EventMessage represents the information an event contains. 
+  EventMessage represents the information an event contains.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Type,
     :Action,
@@ -32,4 +32,3 @@ defmodule DockerEngineAPI.Model.EventMessage do
      |> Deserializer.deserialize(:Actor, :struct, DockerEngineAPI.Model.EventActor)
   end
 end
-

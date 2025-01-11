@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.SwarmSpecCaConfigExternalCasInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Protocol,
     :URL,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.SwarmSpecCaConfigExternalCasInner do
     value
   end
 end
-

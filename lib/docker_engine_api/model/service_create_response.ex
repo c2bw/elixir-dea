@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceCreateResponse do
   @moduledoc """
-  contains the information returned to a client on the creation of a new service. 
+  contains the information returned to a client on the creation of a new service.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :ID,
     :Warnings
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ServiceCreateResponse do
     value
   end
 end
-

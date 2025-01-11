@@ -6,7 +6,7 @@ defmodule DockerEngineAPI.Model.HostConfig do
   Container configuration that depends on the host we are running on
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :CpuShares,
     :Memory,
@@ -170,4 +170,3 @@ defmodule DockerEngineAPI.Model.HostConfig do
      |> Deserializer.deserialize(:Mounts, :list, DockerEngineAPI.Model.Mount)
   end
 end
-

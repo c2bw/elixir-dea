@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkContainer do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :EndpointID,
@@ -27,4 +27,3 @@ defmodule DockerEngineAPI.Model.NetworkContainer do
     value
   end
 end
-

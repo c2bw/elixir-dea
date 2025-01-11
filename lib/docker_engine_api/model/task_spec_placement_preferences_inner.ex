@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.TaskSpecPlacementPreferencesInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Spread
   ]
@@ -22,4 +22,3 @@ defmodule DockerEngineAPI.Model.TaskSpecPlacementPreferencesInner do
      |> Deserializer.deserialize(:Spread, :struct, DockerEngineAPI.Model.TaskSpecPlacementPreferencesInnerSpread)
   end
 end
-

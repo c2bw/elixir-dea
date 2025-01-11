@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.EndpointIpamConfig do
   @moduledoc """
-  EndpointIPAMConfig represents an endpoint's IPAM configuration. 
+  EndpointIPAMConfig represents an endpoint's IPAM configuration.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :IPv4Address,
     :IPv6Address,
@@ -23,4 +23,3 @@ defmodule DockerEngineAPI.Model.EndpointIpamConfig do
     value
   end
 end
-

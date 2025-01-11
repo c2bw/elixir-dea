@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.Ipam do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Driver,
     :Config,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.Ipam do
      |> Deserializer.deserialize(:Config, :list, DockerEngineAPI.Model.IpamConfig)
   end
 end
-

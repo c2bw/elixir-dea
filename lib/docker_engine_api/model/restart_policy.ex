@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.RestartPolicy do
   @moduledoc """
-  The behavior to apply when the container exits. The default is not to restart.  An ever increasing delay (double the previous delay, starting at 100ms) is added before each restart to prevent flooding the server. 
+  The behavior to apply when the container exits. The default is not to restart.  An ever increasing delay (double the previous delay, starting at 100ms) is added before each restart to prevent flooding the server.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Name,
     :MaximumRetryCount
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.RestartPolicy do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkingConfig do
   @moduledoc """
-  NetworkingConfig represents the container's networking configuration for each of its interfaces. It is used for the networking configs specified in the `docker create` and `docker network connect` commands. 
+  NetworkingConfig represents the container's networking configuration for each of its interfaces. It is used for the networking configs specified in the `docker create` and `docker network connect` commands.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :EndpointsConfig
   ]
@@ -22,4 +22,3 @@ defmodule DockerEngineAPI.Model.NetworkingConfig do
      |> Deserializer.deserialize(:EndpointsConfig, :map, DockerEngineAPI.Model.EndpointSettings)
   end
 end
-

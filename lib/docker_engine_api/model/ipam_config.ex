@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.IpamConfig do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Subnet,
     :IPRange,
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.IpamConfig do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ImageInspectRootFs do
   @moduledoc """
-  Information about the image's RootFS, including the layer IDs. 
+  Information about the image's RootFS, including the layer IDs.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Type,
     :Layers
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ImageInspectRootFs do
     value
   end
 end
-

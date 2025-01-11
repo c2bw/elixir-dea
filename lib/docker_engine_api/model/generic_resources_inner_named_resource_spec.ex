@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.GenericResourcesInnerNamedResourceSpec do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Kind,
     :Value
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.GenericResourcesInnerNamedResourceSpec do
     value
   end
 end
-

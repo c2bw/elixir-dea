@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PortBinding do
   @moduledoc """
-  PortBinding represents a binding between a host IP address and a host port. 
+  PortBinding represents a binding between a host IP address and a host port.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :HostIp,
     :HostPort
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.PortBinding do
     value
   end
 end
-

@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ImageDeleteResponseItem do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Untagged,
     :Deleted
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.ImageDeleteResponseItem do
     value
   end
 end
-

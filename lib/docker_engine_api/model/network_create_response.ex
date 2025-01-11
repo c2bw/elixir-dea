@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NetworkCreateResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Id,
     :Warning
@@ -21,4 +21,3 @@ defmodule DockerEngineAPI.Model.NetworkCreateResponse do
     value
   end
 end
-

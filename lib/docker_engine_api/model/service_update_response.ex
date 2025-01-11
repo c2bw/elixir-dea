@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.ServiceUpdateResponse do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Warnings
   ]
@@ -19,4 +19,3 @@ defmodule DockerEngineAPI.Model.ServiceUpdateResponse do
     value
   end
 end
-

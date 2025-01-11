@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.CreateImageInfo do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :id,
     :error,
@@ -33,4 +33,3 @@ defmodule DockerEngineAPI.Model.CreateImageInfo do
      |> Deserializer.deserialize(:progressDetail, :struct, DockerEngineAPI.Model.ProgressDetail)
   end
 end
-

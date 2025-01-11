@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.NodeDescription do
   @moduledoc """
-  NodeDescription encapsulates the properties of the Node as reported by the agent. 
+  NodeDescription encapsulates the properties of the Node as reported by the agent.
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Hostname,
     :Platform,
@@ -33,4 +33,3 @@ defmodule DockerEngineAPI.Model.NodeDescription do
      |> Deserializer.deserialize(:TLSInfo, :struct, DockerEngineAPI.Model.TlsInfo)
   end
 end
-

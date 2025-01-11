@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.PluginConfigLinux do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :Capabilities,
     :AllowAllDevices,
@@ -26,4 +26,3 @@ defmodule DockerEngineAPI.Model.PluginConfigLinux do
      |> Deserializer.deserialize(:Devices, :list, DockerEngineAPI.Model.PluginDevice)
   end
 end
-

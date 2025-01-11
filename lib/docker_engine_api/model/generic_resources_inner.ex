@@ -3,10 +3,10 @@
 
 defmodule DockerEngineAPI.Model.GenericResourcesInner do
   @moduledoc """
-  
+
   """
 
-  @derive Jason.Encoder
+  @derive JSON.Encoder
   defstruct [
     :NamedResourceSpec,
     :DiscreteResourceSpec
@@ -25,4 +25,3 @@ defmodule DockerEngineAPI.Model.GenericResourcesInner do
      |> Deserializer.deserialize(:DiscreteResourceSpec, :struct, DockerEngineAPI.Model.GenericResourcesInnerDiscreteResourceSpec)
   end
 end
-
