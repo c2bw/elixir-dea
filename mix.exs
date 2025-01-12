@@ -36,6 +36,7 @@ defmodule DockerEngineAPI.Mixfile do
   defp deps do
     [
       {:tesla, "~> 1.11"},
+      {:jason, "~> 1.4"},
       {:ex_doc, "~> 0.34.1", only: :dev, runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false}
     ]
